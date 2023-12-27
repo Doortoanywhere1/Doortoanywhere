@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="text-align: center; font-size: 80px; margin-bottom: 20px;">어디로든문</title>
+  <!-- 추가된 폰트 코드 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'yg-jalnan';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0; /* 페이지의 기본 여백 제거 */
+      padding: 0; /* 페이지의 기본 여백 제거 */
+      background-image: url('어디로든배경.png'); /* 이미지 파일의 경로로 변경하세요 */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* 스크롤 시 이미지가 고정되도록 설정 */
+      text-align: center;
+      font-family: 'Bagel Fat One', sans-serif; /* 추가한 폰트를 적용 */
+    }
+
+    h1 {
+      font-size: 80px; /* 폰트 크기를 80px로 설정 */
+      color: #0060bc; /* 폰트 컬러를 #0060bc로 설정 */
+      text-shadow: 3px 3px #dbffff, -3px -3px #dbffff, 3px -3px #dbffff, -3px 3px #dbffff, 3px 0 #dbffff, 0 3px #dbffff, -3px 0 #dbffff, 0 -3px #dbffff; /* text-shadow 효과 적용 */
+      -webkit-text-stroke-width: 1px; /* 텍스트 테두리 너비 설정 */
+      -webkit-text-stroke-color: #000; /* 텍스트 테두리 색상 설정 */
+      margin-bottom: 250px; /* 여백 추가 */
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 8px 30px;
+      font-size: 20px;
+      border: 3px solid #000; /* 테두리 속성 추가 */
+      border-radius: 25px; /* 테두리를 둥글게 만드는 코드 추가 */
+      background-color: #ffdd00; /* 배경 색상을 #ffdd00으로 설정 */
+      font-family: 'yg-jalnan', sans-serif; /* 추가한 폰트를 적용 */
+      cursor: pointer; /* 커서 모양을 포인터로 설정 */
+      transition: background-color 0.3s; /* 배경 색상 변경 시 부드러운 전환을 위한 트랜지션 설정 */
+    }
+
+    button:hover {
+      background-color: #dbffff; /* 마우스 오버 시 배경 색상 변경 */
+    }
+  </style>
+</head>
+<body>
+  <h1>어디로든 문</h1>
+  <button onclick="goToRandomSite()">어디로든 갈래!</button>
+
+  <script>
+    function goToRandomSite() {
+      var sites = [
+        'https://forms.gle/6VoRuHipqQb45gAC8',
+        'https://www.instagram.com/gihoung/',
+        'https://www.youtube.com/playlist?list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U',
+        'https://www.youtube.com/watch?v=WPEzPgsMk3E&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=192&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=2Gpl0sfnvxw&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=182&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=nJeMoOfgwL8&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=177&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=UBLxgz_RE_Q&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=163&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=FpE_8GjgxFU&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=161&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=Cr0MWNm3WxQ&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=142&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=tLNg0V-AB9M&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=136&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=jIoYsTESxr4&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=132&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=RLPipRU8KU0&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=127&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=mZMkjkCASLY&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=86&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=kK0M74E8PS4&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=59&pp=gAQBiAQB',
+        'https://www.youtube.com/watch?v=NmvJpnt62RM&list=PL0X7pRQGbVIFTX6hmmAkBgoYCzcpo4V_U&index=11&pp=gAQBiAQB'
+      ];
+
+      var randomIndex = Math.floor(Math.random() * sites.length);
+      var randomSite = sites[randomIndex];
+
+      window.location.href = randomSite;
+    }
+  </script>
+</body>
+</html>
