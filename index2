@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="text-align: center; font-size: 80px; margin-bottom: 20px;">어디로든문</title>
+  <!-- 추가된 폰트 코드 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'yg-jalnan';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0; /* 페이지의 기본 여백 제거 */
+      padding: 0; /* 페이지의 기본 여백 제거 */
+      background-image: url('어디로든배경.png'); /* 이미지 파일의 경로로 변경하세요 */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* 스크롤 시 이미지가 고정되도록 설정 */
+      text-align: center;
+      font-family: 'Bagel Fat One', sans-serif; /* 추가한 폰트를 적용 */
+    }
+
+    h1 {
+      font-size: 80px; /* 폰트 크기를 80px로 설정 */
+      color: #0060bc; /* 폰트 컬러를 #0060bc로 설정 */
+      text-shadow: 3px 3px #dbffff, -3px -3px #dbffff, 3px -3px #dbffff, -3px 3px #dbffff, 3px 0 #dbffff, 0 3px #dbffff, -3px 0 #dbffff, 0 -3px #dbffff; /* text-shadow 효과 적용 */
+      -webkit-text-stroke-width: 1px; /* 텍스트 테두리 너비 설정 */
+      -webkit-text-stroke-color: #000; /* 텍스트 테두리 색상 설정 */
+      margin-bottom: 250px; /* 여백 추가 */
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 8px 30px;
+      font-size: 20px;
+      border: 3px solid #000; /* 테두리 속성 추가 */
+      border-radius: 25px; /* 테두리를 둥글게 만드는 코드 추가 */
+      background-color: #ffdd00; /* 배경 색상을 #ffdd00으로 설정 */
+      font-family: 'yg-jalnan', sans-serif; /* 추가한 폰트를 적용 */
+      cursor: pointer; /* 커서 모양을 포인터로 설정 */
+      transition: background-color 0.3s; /* 배경 색상 변경 시 부드러운 전환을 위한 트랜지션 설정 */
+    }
+
+    button:hover {
+      background-color: #dbffff; /* 마우스 오버 시 배경 색상 변경 */
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* 모바일 화면에 대한 스타일 지정 */
+      h1 {
+        font-size: 60px; /* 모바일에서 폰트 크기를 줄임 */
+        margin-top: 50px; /* 모바일에서 여백을 줄임 */
+        margin-bottom: 180px; /* 모바일에서 여백을 줄임 */
+      }
+
+      button {
+        margin-top: 150px;
+        font-size: 16px; /* 모바일에서 버튼 폰트 크기를 줄임 */
+      }
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 1024px) {
+      /* 태블릿 화면에 대한 스타일 지정 */
+      h1 {
+        font-size: 80px; /* 태블릿에서 폰트 크기를 조절 */
+        margin-top: 100px; /* 모바일에서 여백을 줄임 */
+        margin-bottom: 200px; /* 태블릿에서 여백을 조절 */
+      }
+
+      button {
+        margin-top: 250px;
+        font-size: 24px; /* 태블릿에서 버튼 폰트 크기를 조절 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>어디로든 문</h1>
+  <button onclick="goToRandomSite()">어디로든 갈래!</button>
+
+  <script>
+    var sites = [
+      'https://www.instagram.com/gihoung/',
+      'https://www.youtube.com/watch?v=WPEzPgsMk3E',
+      'https://youtu.be/2Gpl0sfnvxw?si=glNASanx-KkP-jTT',
+      'https://youtu.be/nJeMoOfgwL8?si=OHuIBa936VPKLL6h',
+      'https://youtu.be/UBLxgz_RE_Q?si=PRf_-UHuRX2SeB9h',
+      'https://forms.gle/6VoRuHipqQb45gAC8',
+      'https://youtu.be/FpE_8GjgxFU?si=G_iy2mNyif3kQvwh',
+      'https://youtu.be/Cr0MWNm3WxQ?si=ASvNfF_M1QkGOwFA',
+      'https://youtu.be/tLNg0V-AB9M?si=O3bAGoYPc59JY_wH',
+      'https://youtu.be/jIoYsTESxr4?si=CL1lHWJqM7MSHY7Y',
+      'https://youtu.be/RLPipRU8KU0?si=ilj6wMd7jmUDuRC6',
+      'https://youtu.be/mZMkjkCASLY?si=09gf9j4gsYGzS02C',
+      'https://youtu.be/kK0M74E8PS4?si=GN-9U4_NYZDhr5L5',
+      'https://youtu.be/NmvJpnt62RM?si=ZyYGYxPlnqBPNrVx',
+      'https://youtu.be/iUki5C6zXtQ?si=drKPSycCdieiKWHW',
+      'https://youtu.be/iGA-UuddjX8?si=mbZjokxyd3oEl3_6',
+      'https://youtu.be/oWXF8RiKfd8?si=rPv0PWVYQqoOEHWd',
+      'https://maze.toys/mazes/mini/daily/',
+      'https://paint.toys/',
+      'https://forms.gle/6VoRuHipqQb45gAC8',
+      'https://clicking.toys/peg-solitaire/english/',
+      'https://puginarug.com/',
+      'https://binarypiano.com/',
+      'https://longdogechallenge.com/',
+      'https://mondrianandme.com/',
+      'https://thatsthefinger.com/',
+      'https://cursoreffects.com/',
+      'https://sugang.snu.ac.kr/',
+      'https://shadowart.withgoogle.com/?lang=ko',
+      'https://quickdraw.withgoogle.com/#',
+      'https://forms.gle/6VoRuHipqQb45gAC8'
+    ];
+
+    var clickCount = 0;
+    var visitedSites = JSON.parse(localStorage.getItem('visitedSites')) || [];
+
+    function goToRandomSite() {
+      if (visitedSites.length === sites.length) {
+        // Reset visitedSites if all sites have been visited
+        visitedSites = [];
+      }
+
+      var randomSite;
+      do {
+        randomSite = sites[Math.floor(Math.random() * sites.length)];
+      } while (visitedSites.includes(randomSite));
+
+      // Update visitedSites and store in local storage
+      visitedSites.push(randomSite);
+      localStorage.setItem('visitedSites', JSON.stringify(visitedSites));
+
+      window.location.href = randomSite;
+    }
+  </script>
+</body>
+</html>
