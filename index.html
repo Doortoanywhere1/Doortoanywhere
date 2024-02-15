@@ -25,6 +25,7 @@
       background-attachment: fixed; /* 스크롤 시 이미지가 고정되도록 설정 */
       text-align: center;
       font-family: 'Bagel Fat One', sans-serif; /* 추가한 폰트를 적용 */
+      height: 100%; /* 뷰포트 높이를 100%로 설정 */
     }
 
     h1 {
@@ -52,6 +53,29 @@
       background-color: #dbffff; /* 마우스 오버 시 배경 색상 변경 */
     }
 
+    /* 새로운 스타일 추가 */
+    .floating-image {
+      position: fixed;
+      width: 15%;
+      height: auto;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .left-floating {
+      left: 30px;
+      bottom: 25%;
+    }
+
+    .right-floating {
+      right: 30px;
+      bottom: 25%;
+    }
+
+    .mobile-banner {
+      display: none;
+    }
+
     @media only screen and (max-width: 600px) {
       /* 모바일 화면에 대한 스타일 지정 */
       h1 {
@@ -63,6 +87,19 @@
       button {
         margin-top: 150px;
         font-size: 16px; /* 모바일에서 버튼 폰트 크기를 줄임 */
+      }
+
+      /* 모바일에서 플로팅 이미지는 나타나지 않도록 숨김 */
+      .floating-image {
+        display: none;
+      }
+
+      /* 모바일 배너 스타일 추가 */
+      .mobile-banner {
+        display: block;
+        position: fixed;
+        width: 100%; /* 뷰포트 가로 사이즈의 100%로 설정 */
+        bottom: 2%; /* 뷰포트 세로 사이즈를 기준으로 2%로 설정 */
       }
     }
 
@@ -86,6 +123,19 @@
 <body>
   <h1>어디로든 문</h1>
   <button onclick="goToRandomSite()">어디로든 갈래!</button>
+
+  <!-- 새로운 플로팅 이미지 추가 -->
+  <a href="https://www.instagram.com/hwapan_farm/?hl=af" target="_blank">
+    <img class="floating-image left-floating" src="web_banner.jpg" alt="Floating Image Left">
+  </a>
+  <a href="https://www.instagram.com/hwapan_farm/?hl=af" target="_blank">
+    <img class="floating-image right-floating" src="web_banner.jpg" alt="Floating Image Right">
+  </a>
+
+  <!-- 새로운 모바일 배너 추가 -->
+  <a href="https://www.instagram.com/hwapan_farm/?hl=af" target="_blank">
+    <img class="mobile-banner" src="m_banner.jpg" alt="Mobile Banner">
+  </a>
 
   <script>
     var sites = [
